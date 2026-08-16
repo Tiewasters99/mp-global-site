@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MP Global Capital Associates</title>
+<meta name="description" content="MP Global Capital Associates, LLC — a private investment and advisory firm focused on healthcare and adjacent sectors. Princeton, New Jersey.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Archivo:wght@200;300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --abyss:#101A18;
+    --panel:#141F1C;
+    --line:#26332F;
+    --bone:#E9E6DD;
+    --stone:#9DA398;
+    --jade:#8FA99C;
+    --max:1180px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--abyss);
+    color:var(--bone);
+    font-family:'Archivo',sans-serif;
+    font-weight:300;
+    font-size:16px;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--jade);color:var(--abyss)}
+
+  .mono{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10.5px;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--jade);
+  }
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 6vw}
+
+  /* ---------- top bar ---------- */
+  header{
+    position:fixed;inset:0 0 auto 0;z-index:10;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:26px 6vw;
+    background:linear-gradient(to bottom, rgba(16,26,24,.92), rgba(16,26,24,0));
+  }
+  .mark{display:flex;align-items:center;gap:16px;text-decoration:none}
+  .mark svg{display:block}
+  .mark span{
+    font-family:'Cormorant Garamond',serif;font-weight:500;
+    font-size:15px;letter-spacing:.32em;color:var(--bone);
+  }
+  nav{display:flex;gap:38px}
+  nav a{
+    font-family:'IBM Plex Mono',monospace;font-size:10px;
+    letter-spacing:.26em;text-transform:uppercase;
+    color:var(--stone);text-decoration:none;
+    transition:color .3s ease;
+  }
+  nav a:hover,nav a:focus-visible{color:var(--bone)}
+  nav a:focus-visible{outline:1px solid var(--jade);outline-offset:4px}
+
+  /* ---------- hero ---------- */
+  .hero{
+    min-height:100vh;
+    display:flex;flex-direction:column;justify-content:center;
+    padding-top:80px;
+  }
+  .hero .eyebrow{margin-bottom:44px}
+  h1{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:300;
+    font-size:clamp(3.4rem, 8.6vw, 7.4rem);
+    line-height:1.02;
+    letter-spacing:.005em;
+  }
+  h1 em{
+    font-style:italic;font-weight:300;color:var(--jade);
+  }
+  .hero p{
+    margin-top:52px;max-width:34em;color:var(--stone);
+    font-size:15.5px;
+  }
+  .hero .rule{
+    width:64px;height:1px;background:var(--line);margin-top:52px;
+  }
+  .scroll-cue{
+    margin-top:auto;padding:0 0 40px;
+    font-family:'IBM Plex Mono',monospace;font-size:10px;
+    letter-spacing:.3em;color:var(--line);
+  }
+
+  /* load-in choreography */
+  .rise{opacity:0;transform:translateY(22px);animation:rise 1.1s cubic-bezier(.2,.6,.2,1) forwards}
+  .rise.d1{animation-delay:.15s}
+  .rise.d2{animation-delay:.35s}
+  .rise.d3{animation-delay:.6s}
+  .rise.d4{animation-delay:.85s}
+  @keyframes rise{to{opacity:1;transform:none}}
+
+  /* ---------- sections ---------- */
+  section{padding:130px 0;border-top:1px solid var(--line)}
+  .eyebrow{display:block;margin-bottom:56px}
+  .lede{
+    font-family:'Cormorant Garamond',serif;font-weight:300;
+    font-size:clamp(1.9rem,3.4vw,2.9rem);line-height:1.25;
+    max-width:22em;
+  }
+  .lede em{font-style:italic;color:var(--jade)}
+  .body-copy{margin-top:40px;max-width:36em;color:var(--stone);font-size:15.5px}
+
+  /* focus columns */
+  .cols{
+    margin-top:80px;display:grid;
+    grid-template-columns:repeat(3,1fr);gap:0;
+  }
+  .col{padding:36px 40px 8px 0;border-top:1px solid var(--line)}
+  .col + .col{border-left:1px solid var(--line);padding-left:40px}
+  .col h3{
+    font-family:'Cormorant Garamond',serif;font-weight:400;
+    font-size:1.35rem;letter-spacing:.02em;margin-bottom:14px;
+  }
+  .col p{font-size:14px;color:var(--stone);line-height:1.8}
+
+
+  /* ---------- contact ---------- */
+  .contact .lede{max-width:none}
+  .contact-lines{margin-top:64px;display:flex;flex-direction:column;gap:8px}
+  .contact-lines a{
+    color:var(--bone);text-decoration:none;
+    font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.4rem);
+    font-weight:300;letter-spacing:.01em;
+    border-bottom:1px solid transparent;
+    transition:border-color .3s ease;
+    width:max-content;
+  }
+  .contact-lines a:hover,.contact-lines a:focus-visible{border-color:var(--jade)}
+  .contact-lines span{color:var(--stone);font-size:14px;letter-spacing:.06em}
+
+  footer{
+    border-top:1px solid var(--line);
+    padding:44px 6vw 56px;
+    display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;
+    font-family:'IBM Plex Mono',monospace;font-size:10px;
+    letter-spacing:.2em;text-transform:uppercase;color:var(--stone);
+  }
+
+  /* scroll reveal */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.6,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .rise,.reveal{opacity:1;transform:none;animation:none;transition:none}
+  }
+
+  @media (max-width:860px){
+    nav{display:none}
+    .cols{grid-template-columns:1fr}
+    .col + .col{border-left:none;padding-left:0}
+    section{padding:90px 0}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="mark" href="#top" aria-label="MP Global Capital Associates — home">
+    <svg viewBox="0 0 200 200" width="34" height="34" aria-hidden="true">
+      <g stroke="#E9E6DD" stroke-width="9" fill="none" stroke-linecap="square">
+        <path d="M 42 152 L 42 48"/>
+        <path d="M 42 48 L 83 124"/>
+        <path d="M 83 124 L 124 48"/>
+        <path d="M 124 48 L 124 152"/>
+        <path d="M 124 54 C 174 54 174 104 124 104" stroke="#8FA99C"/>
+      </g>
+    </svg>
+    <span>MP&nbsp;GLOBAL</span>
+  </a>
+  <nav aria-label="Primary">
+    <a href="#focus">Focus</a>
+    <a href="#advisory">Advisory</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <div class="hero wrap">
+    <span class="eyebrow mono rise d1">Princeton, New Jersey&ensp;—&ensp;Private Healthcare Capital</span>
+    <h1>
+      <span class="rise d2" style="display:block">Quiet capital,</span>
+      <span class="rise d3" style="display:block"><em>for the future of care.</em></span>
+    </h1>
+    <p class="rise d4">MP Global Capital Associates, LLC is a private investment and advisory
+    firm focused on healthcare and adjacent sectors. We advise a small number of
+    clients and specialize in early-stage funding for disruptive start-ups.</p>
+    <div class="rule rise d4"></div>
+    <div class="scroll-cue rise d4">Scroll</div>
+  </div>
+
+  <section id="focus">
+    <div class="wrap">
+      <span class="eyebrow mono reveal">Focus</span>
+      <p class="lede reveal">Healthcare is not a sector to us. It is <em>the</em> sector —
+      without health, no other sector matters.</p>
+      <p class="body-copy reveal">We focus on three primary areas:</p>
+      <div class="cols">
+        <div class="col reveal">
+          <h3>Care operations</h3>
+          <p>Businesses that deliver care every day — and the platforms that run them. We are currently advising a Princeton-based start-up on an innovative elder-care platform.</p>
+        </div>
+        <div class="col reveal">
+          <h3>Clinical innovation</h3>
+          <p>Science and invention with a direct line to the patient, the clinician, and the institution. We have developed a particular expertise in skin-care related technologies.</p>
+        </div>
+        <div class="col reveal">
+          <h3>Adjacent sectors</h3>
+          <p>The infrastructure, services, and technology that healthcare cannot function without.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="advisory">
+    <div class="wrap">
+      <span class="eyebrow mono reveal">Advisory</span>
+      <p class="lede reveal">Our core mission is to provide capital and strategic advice to founders, scientists, and inventors — people driving <em>innovation</em> in healthcare.</p>
+      <div class="body-copy reveal">
+        <p>We advise early-stage healthcare companies on raising private capital:
+        shaping the story, sizing the round, and placing it with investors who
+        understand what they are looking at.</p>
+        <p style="margin-top:24px">Based in Princeton, New Jersey, we work alongside the venture capital
+        and private equity relationships that surround us — and we bring our
+        clients into rooms that are otherwise difficult to enter.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <span class="eyebrow mono reveal">Contact</span>
+      <p class="lede reveal">We take new relationships <em>by introduction.</em></p>
+      <p class="body-copy reveal">We only work with clients vetted by our network of contacts — lawyers, accountants, bankers, and venture capital firms.</p>
+      <div class="contact-lines reveal">
+        <a href="mailto:inquiries@mpglobalcapitalassociates.com">inquiries@mpglobalcapitalassociates.com</a>
+        <span>Princeton, New Jersey</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span>© MMXXVI&ensp;MP Global Capital Associates, LLC</span>
+  <span>Private &amp; Confidential</span>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    for (const e of entries){
+      if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    }
+  },{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
