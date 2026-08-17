@@ -10,12 +10,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Archivo:wght@200;300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --abyss:#101A18;
-    --panel:#141F1C;
-    --line:#26332F;
+    --abyss:#171310;
+    --panel:#1D1814;
+    --line:#362D24;
     --bone:#E9E6DD;
-    --stone:#9DA398;
-    --jade:#8FA99C;
+    --stone:#A69C8C;
+    --gold:#D9B47E;
     --max:1180px;
   }
   *{margin:0;padding:0;box-sizing:border-box}
@@ -29,14 +29,14 @@
     line-height:1.75;
     -webkit-font-smoothing:antialiased;
   }
-  ::selection{background:var(--jade);color:var(--abyss)}
+  ::selection{background:var(--gold);color:var(--abyss)}
 
   .mono{
     font-family:'IBM Plex Mono',monospace;
     font-size:10.5px;
     letter-spacing:.28em;
     text-transform:uppercase;
-    color:var(--jade);
+    color:var(--gold);
   }
   .wrap{max-width:var(--max);margin:0 auto;padding:0 6vw}
 
@@ -45,7 +45,7 @@
     position:fixed;inset:0 0 auto 0;z-index:10;
     display:flex;align-items:center;justify-content:space-between;
     padding:26px 6vw;
-    background:linear-gradient(to bottom, rgba(16,26,24,.92), rgba(16,26,24,0));
+    background:linear-gradient(to bottom, rgba(23,19,16,.92), rgba(23,19,16,0));
   }
   .mark{display:flex;align-items:center;gap:16px;text-decoration:none}
   .mark svg{display:block}
@@ -61,7 +61,7 @@
     transition:color .3s ease;
   }
   nav a:hover,nav a:focus-visible{color:var(--bone)}
-  nav a:focus-visible{outline:1px solid var(--jade);outline-offset:4px}
+  nav a:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
 
   /* ---------- hero ---------- */
   .hero{
@@ -78,7 +78,7 @@
     letter-spacing:.005em;
   }
   h1 em{
-    font-style:italic;font-weight:300;color:var(--jade);
+    font-style:italic;font-weight:300;color:var(--gold);
   }
   .hero p{
     margin-top:52px;max-width:34em;color:var(--stone);
@@ -109,7 +109,7 @@
     font-size:clamp(1.9rem,3.4vw,2.9rem);line-height:1.25;
     max-width:22em;
   }
-  .lede em{font-style:italic;color:var(--jade)}
+  .lede em{font-style:italic;color:var(--gold)}
   .body-copy{margin-top:40px;max-width:36em;color:var(--stone);font-size:15.5px}
 
   /* focus columns */
@@ -137,7 +137,7 @@
     transition:border-color .3s ease;
     width:max-content;
   }
-  .contact-lines a:hover,.contact-lines a:focus-visible{border-color:var(--jade)}
+  .contact-lines a:hover,.contact-lines a:focus-visible{border-color:var(--gold)}
   .contact-lines span{color:var(--stone);font-size:14px;letter-spacing:.06em}
 
   footer{
@@ -175,7 +175,7 @@
         <path d="M 42 48 L 83 124"/>
         <path d="M 83 124 L 124 48"/>
         <path d="M 124 48 L 124 152"/>
-        <path d="M 124 54 C 174 54 174 104 124 104" stroke="#8FA99C"/>
+        <path d="M 124 54 C 174 54 174 104 124 104" stroke="#D9B47E"/>
       </g>
     </svg>
     <span>MP&nbsp;GLOBAL</span>
@@ -215,7 +215,7 @@
         </div>
         <div class="col reveal">
           <h3>Clinical innovation</h3>
-          <p>Science and invention with a direct line to the patient, the clinician, and the institution. We have developed a particular expertise in skin-care related technologies.</p>
+          <p>Science and invention with a direct line to the patient, the clinician, and the institution. We have developed particular expertise in skin-care related technologies.</p>
         </div>
         <div class="col reveal">
           <h3>Adjacent sectors</h3>
